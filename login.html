@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+	<title>Login Form</title>
+	
+</head>
+<body>
+    <style>
+        body {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+
+
+  <nav id="nav-bar" class="dropdown">
+          
+                <div class="dropdown-content">
+                
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="admision.html" target="_blank">Admision</a>
+                    <a href="courses.html">Courses</a>
+                    <a href="index.html#footer">Contact</a>
+                    <a href="apply.html">Apply here</a>
+                    <a href="login.html">Login</a>
+                
+                </div>
+               
+            </nav>  
+
+
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh auto; color: white;">Triumph University</h1>
+        <p style="font-family:serif;color: wheat;"><i>excellence is the key</i></p>
+    </header>
+	<div class="login-form">
+		<h2>Login </h2>
+
+        <p>Please enter your username and password to login.</p>
+
+        
+		<form >
+			<label for="username">Username:</label><br>
+			<input type="text" id="username" name="username" placeholder="username is your email" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password"	name="password" placeholder="Password is Your Reg Number" required>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+
+
+
+
+    <section class="apply" id="section">
+        <h2>Apply Now</h2>
+        <p>If you are not a member, please apply to join Triumph University.</p>
+    <a href="apply.html" class="apply-link">
+         <strong>Apply here</strong>
+    </a>
+    </section>
+
+
+<br><br>
+    <footer>
+        <p>&copy; 2023 Triumph University. All rights reserved.</p> 
+<br>
+        <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const storedUser = localStorage.getItem("user_" + username);
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      if (user.password === password) {
+        alert(`Welcome ${user.name}! Your application status is: ${user.status}`);
+      } else {
+        alert("Incorrect password.");
+      }
+    } else {
+      alert("User not found. Please apply first.");
+    }
+  });
+</script>
+</body>
+</html>

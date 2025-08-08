@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Triumph University Apply</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h4 style="background-color: navy; color: white; padding: 30px;">Apply To Triumph University</h4>
+  </header>
+
+  <nav id="nav-bar" class="dropdown">
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="admision.html" target="_blank">Admission</a>
+      <a href="courses.html">Courses</a>
+      <a href="home.html">Contact</a>
+      <a href="apply.html">Apply here</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <br />
+
+  <form id="application-form" action="https://formspree.io/f/xqalejka" method="POST">
+    <label><h4>Full Name</h4></label>
+    <input type="text" name="name" placeholder="Enter your full name" required />
+
+    <label><h4>Phone Number</h4></label>
+    <input type="tel" name="phone" placeholder="Enter your phone number" required />
+
+    <label><h4>Fill in your JAMB/UTME Registration Number</h4></label>
+    <input type="text" name="reg_number" placeholder="202500000000FF" required />
+
+    <label><h4>Please Input Your E-mail</h4></label>
+    <input type="email" for="email" name="email" required />
+
+    <label><h4>Select Your Faculty</h4></label>
+    <select name="faculty" id="faculty" onchange="showDepartments()" required style="width: 20rem; height: 3rem;">
+      <option value="">--Choose Your Faculty--</option>
+      <option value="Agriculture">Agriculture</option>
+      <option value="Allied">Allied Health</option>
+      <option value="Computing">Computing</option>
+    </select>
+
+    <br /><br />
+
+    <label for="departments">Select Department:</label>
+    <select id="departments" name="department" required>
+      <option value="">-- Choose a department --</option>
+    </select>
+
+    <br /><br />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <br /><br />
+
+  <footer id="footer">
+    <p>Contact us:</p>
+    <a href="mailto:nzefilitriumph@gmail.com">Send us an email: nzefilitriumph@gmail.com</a>
+    <p>Phone: +2348089074745</p>
+    <br>
+    
+    <a href="home.html"><button>send us a message </button></button></a>
+  </footer>
+
+  <script>
+    function showDepartments() {
+      const faculty = document.getElementById("faculty").value;
+      const departmentSelect = document.getElementById("departments");
+
+      departmentSelect.innerHTML = '<option value="">-- Choose a department --</option>';
+
+      const departmentsMap = {
+        Agriculture: ["Agricultural Science", "Animal Science", "Crop Science"],
+        Allied: ["Nursing", "Optometry"],
+        Computing: ["Computer Science", "Cyber Security", "Data Science", "Information Technology", "Software Engineering"]
+      };
+
+      const departments = departmentsMap[faculty] || [];
+
+      departments.forEach(function (dept) {
+        const option = document.createElement("option");
+        option.value = dept;
+        option.textContent = dept;
+        departmentSelect.appendChild(option);
+      });
+    }
+
+    // Save form data to localStorage before submit
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("application-form");
+
+      form.addEventListener("submit", function () {
+        const name = form.querySelector('input[name="name"]').value;
+        const phone = form.querySelector('input[name="phone"]').value;
+        const regNumber = form.querySelector('input[name="reg_number"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const faculty = form.querySelector('select[name="faculty"]').value;
+        const department = form.querySelector('select[name="department"]').value;
+
+        const user = {
+          name,
+          phone,
+          regNumber,
+          email,
+          faculty,
+          department,
+          password: regNumber,
+          status: "Pending"
+        };
+
+        // Save to localStorage just before submission
+        localStorage.setItem("user_" + email, JSON.stringify(user));
+        window.alert('Your Application Has Been sent');
+      });
+    });
+  </script>
+</body>
+</html>
