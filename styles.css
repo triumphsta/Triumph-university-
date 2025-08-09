@@ -147,8 +147,8 @@ form {
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 80%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 input, select {
