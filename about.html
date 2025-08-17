@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b5559cc5a.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png">
+    <title>Triumph University</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+</head>
+<body id="top">
+    
+      <nav id="nav-bar">
+        <div class="logo"><img src="university_logo.jpg" alt="university logo" width="30px"></div>
+        <div class="nav">
+            <a href="index.html">Triumph University</a>
+            <a href="about.html">About</a>
+        </div>
+        <button id="btn" class="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh; color: white;">Triumph University</h1>
+        <p style="font-family: serif; color: wheat;"><i>excellence is the key</i></p>
+    </header>
+
+    <!-- Sidebar -->
+    <nav id="navbar">
+        <img src="university_logo.jpg" alt="university logo" width="40px">
+        <span><h3>Triumph University</h3></span>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="admision.html"><i class="fa-solid fa-tag"></i> Admission</a></li>
+            <li><a href="faculty.html"><i class="fa-solid fa-font-awesome"></i> Faculties</a></li>
+            
+            <li><a href="home.html"><i class="fa-solid fa-comment"></i> Contact</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-pen"></i> Apply here</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+   
+    <main id="main">
+        <h1>About Triumph University</h1>
+        <p>Triumph University is dedicated to providing quality education and fostering a culture of excellence. Our mission is to empower students to achieve their full potential through innovative teaching and research.</p>
+    </main>
+<br><br><br>
+    <div id="image-gallery">
+        <section class="mission" id="image-gallery">
+            <h2>Our Mission</h2>
+            <p>To provide quality education and empower students to achieve their full potential. We strive to foster an environment of innovation, integrity, and lifelong learning, preparing our students to become responsible leaders and contributors to society.</p>
+        </section>
+<br><br>
+        <section class="vision" id="image-gallery">
+            <h2>Our Vision</h2>
+            <p>To be a leading institution recognized for academic excellence, research innovation, and community engagement. We envision a future where our graduates are equipped with the skills and knowledge to make a positive impact in the world.</p>
+        </section>
+<br><br>
+        <section class="about us" id="image-gallery">
+
+            <h2>About Us</h2>
+            <p>Triumph University was founded in 2025 by Triumph Chukwunwekene Nzefili, with the strong support of visionary partners who shared a common goal — to help students realize their future through pure and quality education.
+<br>
+Built on the belief that "Excellence is the key," Triumph University is dedicated to nurturing intelligent, creative, and purpose-driven students. We are more than just an academic institution — we are a community that inspires innovation, leadership, and personal growth.
+<br>
+With modern facilities, passionate educators, and a student-focused learning environment, we strive to provide world-class education that empowers students to succeed and make a difference in the world.</p>
+        </section>
+<br><br>
+        
+        <a href="#top" id="arrow">↑</a>
+
+    <footer id="footer">
+        <p>&copy; 2025 Triumph University. All rights reserved.</p>
+        
+        <br><br>
+        <a href="index.html"   class="apply" style="width: 8rem; height: 0.3rem; color: navy;">home</a>
+    
+    <br><br>
+        
+    </footer>
+
+        <script>
+        const navbar = document.getElementById("navbar");
+        const toggleBtn = document.getElementById("btn");
+
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

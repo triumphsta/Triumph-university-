@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b5559cc5a.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png">
+    <title>Triumph University</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+</head>
+<body id="top">
+    
+      <nav id="nav-bar">
+        <div class="logo"><img src="university_logo.jpg" alt="university logo" width="30px"></div>
+        <div class="nav">
+            <a href="index.html">Triumph University</a>
+            <a href="about.html">About</a>
+        </div>
+        <button id="btn" class="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh; color: white;">Triumph University</h1>
+        <p style="font-family: serif; color: wheat;"><i>excellence is the key</i></p>
+    </header>
+
+    <!-- Sidebar -->
+    <nav id="navbar">
+        <img src="university_logo.jpg" alt="university logo" width="40px">
+        <span><h3>Triumph University</h3></span>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="admision.html"><i class="fa-solid fa-tag"></i> Admission</a></li>
+            <li><a href="faculty.html">Faculties</a></li>
+            
+            <li><a href="home.html"><i class="fa-solid fa-comment"></i> Contact</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-pen"></i> Apply here</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+   
+  
+
+    <main id="main">
+        <div class="main">
+            <h1>Welcome to Triumph University</h1>
+            <p>A domain of knowledge and excellence, producing and empowering young generations.</p>
+        </div>
+    </main>
+
+    <br><br>
+
+<h2 id="computing">Faculty Of computing</h2>
+    <hr>
+    <br><br>
+
+    <section id="course">
+             <div class="image-gallery">
+
+<br>
+             <div class="image-gallery">
+                    <img src="university_logo.jpg" alt="Triumph University Laboratory" style="width: 100%; height: auto;">
+                    Computer Science
+             </div>
+<br>
+             <div class="image-gallery">
+                    <img src="university_logo.jpg" alt="Triumph University Laboratory" style="width: 100%; height: auto;">
+            Cyber Security
+             </div>
+<br>
+             <div class="image-gallery">
+                    <img src="university_logo.jpg" alt="Triumph University Laboratory" style="width: 100%; height: auto;">
+                    Data Science
+             </div>
+<br>
+             <div class="image-gallery">
+                    <img src="university_logo.jpg" alt="Triumph University Laboratory" style="width: 100%; height: auto;">
+                    Information Technology
+             </div>
+<br>
+             <div class="image-gallery">
+                    <img src="university_logo.jpg" alt="Triumph University Laboratory" style="width: 100%; height: auto;">
+                    Software Engineering
+             </div>
+
+    </section>
+<br><br><br>
+<a href="#top" id="arrow">↑ </a>
+
+
+ <footer id="footer">
+            <p>Contact us:</p>
+            <a href="mailto:nzefilitriumph@gmail.com">Send us an email: nzefilitriumph@gmail.com</a>
+            <p>Phone: +2348089074745</p>
+            <p>Address: Triumph University, 123 Knowledge Lane, Asaba, Country</p>
+            <div id="social-media">
+                <a href="https://www.facebook.com/triumphsta" target="_blank">
+                    <img src="facebook_logo.png" alt="facebook" width="30px">
+                </a>
+                <a href="https://x.com/nzefili5206?t=e2xtI7hmxhv72PjopA-kdA&s=08" target="_blank">
+                    <img src="x_logo.png" alt="x" width="50px">
+                </a>
+                <a href="https://www.instagram.com/triumphstadesign?igsh=YzljYTk1ODg3Zg==" target="_blank">
+                    <img src="Instagram.png" alt="instagram" width="40px">
+                </a>
+            </div>
+           <div class="apply" style="width: 20rem; height: 4rem;">
+            <a href="home.html" style="color: black;">send us a message</a>
+        </div>
+            <p>&copy; 2025 Triumph University. All rights reserved.</p>
+            <br><br><br>
+        </footer>
+    </div>
+
+
+
+          <script>
+        const navbar = document.getElementById("navbar");
+        const toggleBtn = document.getElementById("btn");
+
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+</html>

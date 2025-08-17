@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b5559cc5a.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png">
+    <title>Triumph University</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+</head>
+<body id="top">
+    
+      <nav id="nav-bar">
+        <div class="logo"><img src="university_logo.jpg" alt="university logo" width="30px"></div>
+        <div class="nav">
+            <a href="index.html">Triumph University</a>
+            <a href="about.html">About</a>
+        </div>
+        <button id="btn" class="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh; color: white;">Triumph University</h1>
+        <p style="font-family: serif; color: wheat;"><i>excellence is the key</i></p>
+    </header>
+
+    <!-- Sidebar -->
+    <nav id="navbar">
+        <img src="university_logo.jpg" alt="university logo" width="40px">
+        <span><h3>Triumph University</h3></span>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="admision.html"><i class="fa-solid fa-tag"></i> Admission</a></li>
+            <li><a href="faculty.html"><i class="fa-solid fa-font-awesome"></i> Faculties</a></li>
+            
+            <li><a href="home.html"><i class="fa-solid fa-comment"></i> Contact</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-pen"></i> Apply here</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div id="body">
+        <h2>Send us a message</h2>
+        <h4>We'd like to hear from you</h4>
+
+        <form id="application-form" action="https://formspree.io/f/xqalejka" method="POST">
+            <label>
+                <h4>Enter your Full name</h4>
+            </label>
+            <input type="text" name="name" placeholder="Full name" required>
+
+            <label>
+                <h4>Enter your email address</h4>
+            </label>
+            <input type="email" name="email" placeholder="Please enter your email" required>
+
+            <label>
+                <h4>Please enter your phone number</h4>
+            </label>
+            <input type="tel" name="phone" required>
+
+            <label>
+                <h4>Write your message</h4>
+            </label>
+            <textarea name="message" placeholder="Write your message here..." required></textarea>
+
+            <br><br>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+    <br><br>
+
+    <footer id="footer" style="text-align:center; color:white; padding: 20px;">
+        <p>Contact us:</p>
+        <a href="mailto:nzefilitriumph@gmail.com" style="color:wheat;">Send us an email: nzefilitriumph@gmail.com</a>
+        <p>Phone: +2348089074745</p>
+        <p>Address: Triumph University, 123 Knowledge Lane, Asaba, Country</p>
+
+        <div id="social-media">
+            <a href="https://www.facebook.com/triumphsta" target="_blank">
+                <img src="facebook_logo.png" alt="facebook" width="30px">
+            </a>
+            <a href="https://x.com/nzefili5206?t=e2xtI7hmxhv72PjopA-kdA&s=08" target="_blank">
+                <img src="x_logo.png" alt="x" width="50px">
+            </a>
+            <a href="https://www.instagram.com/triumphstadesign?igsh=YzljYTk1ODg3Zg==" target="_blank">
+                <img src="Instagram.png" alt="instagram" width="40px">
+            </a>
+        </div>
+
+        <br>
+        <p>&copy; 2025 Triumph University. All rights reserved.</p>
+        
+        <br><br>
+
+  <a href="index.html"   class="apply" style="width: 8rem; height: 0.3rem; color: navy;">home</a>
+  <br><br>
+        
+    </footer>
+    
+    <script>const navbar = document.getElementById("navbar");
+        const toggleBtn = document.getElementById("btn");
+
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
+        });</script>
+</body>
+
+</html>

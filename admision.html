@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Triumph Admision</title>
+</head>
+<body>
+    <style>
+        #section {
+            text-align: left;
+            margin: 30px;
+        }
+    </style>
+    
+    
+    <nav id="nav-bar">
+        <div class="logo"><img src="university_logo.jpg" alt="university logo" width="30px"></div>
+        <div class="nav">
+            <a href="index.html">Triumph University</a>
+            <a href="about.html"></a>
+        </div>
+        <button id="btn" class="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    
+
+
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh auto; color: white;">Triumph University</h1>
+        <p style="font-family:serif;color: wheat;"><i>excellence is the key</i></p>
+    </header>
+    
+    
+    <nav id="navbar">
+        <img src="university_logo.jpg" alt="university logo" width="40px">
+        <span><h3>Triumph University</h3></span>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="admision.html"><i class="fa-solid fa-tag"></i> Admission</a></li>
+            <li><a href="faculty.html">Faculties</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="home.html"><i class="fa-solid fa-comment"></i> Contact</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-pen"></i> Apply here</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+<br>
+    <main id="main">
+        <h1>Admission Process</h1>
+        <br>
+        
+    </main>
+
+    <section class="admission-details" id="section">
+        <br><br>
+        <h2>Admission Requirements</h2>
+        <ul>
+            <li>Completed application form</li>
+            <li>WAEC results</li>
+            <li>Utme Results </li>
+            <li>Personally statement or essay</li>
+            <li>Letters of recommendation (optional)</li>
+        </ul>
+<br><br>
+        <h2>Application Process</h2>
+        <p>To apply, please follow these steps:</p>
+        <ol>
+            <li>Complete the online application form.</li>
+            <li>Submit required documents via email or through our online portal.</li>
+            <li>Pay the application fee.</li>
+            <li>Wait for the admission decision, which will be communicated via email.</li>
+        </ol>
+<br><br>
+        <h2>Important Dates</h2>
+        <p>Please check our website for important dates regarding application deadlines and admission decisions.</p>
+
+        <div class="apply">
+            <h4><a href="apply.html">
+               Apply now→
+               </a>
+            </h4>
+        </div>
+</section>
+        <br><br>
+        
+<a href="#top" id="arrow">↑ </a>
+
+ <br><br>
+        <a href="index.html"   class="apply" style="width: 8rem; height: 0.3rem; color: navy;">home</a>
+    
+    <br><br>
+
+<script>
+        const navbar = document.getElementById("navbar");
+        const toggleBtn = document.getElementById("btn");
+
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>

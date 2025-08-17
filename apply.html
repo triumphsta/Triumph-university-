@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b5559cc5a.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png">
+    <title>Triumph University</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+</head>
+<body id="top">
+    
+      <nav id="nav-bar">
+        <div class="logo"><img src="university_logo.jpg" alt="university logo" width="30px"></div>
+        <div class="nav">
+            <a href="index.html">Triumph University</a>
+            <a href="about.html">About</a>
+        </div>
+        <button id="btn" class="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    
+    <header class="Header">
+        <img src="university_logo.jpg" alt="university logo" style="width: 100px; height: auto;">
+        <h1 style="font-size: 5vh; color: white;">Triumph University</h1>
+        <p style="font-family: serif; color: wheat;"><i>excellence is the key</i></p>
+    </header>
+
+    <!-- Sidebar -->
+    <nav id="navbar">
+        <img src="university_logo.jpg" alt="university logo" width="40px">
+        <span><h3>Triumph University</h3></span>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="admision.html"><i class="fa-solid fa-tag"></i> Admission</a></li>
+            <li><a href="faculty.html"> <i class="fa-solid fa-font-awesome"></i> Faculties</a></li>
+            
+            <li><a href="home.html"><i class="fa-solid fa-comment"></i> Contact</a></li>
+            <li><a href="apply.html"><i class="fa-solid fa-pen"></i> Apply here</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+  <br/>
+
+  <form id="application-form" action="https://formspree.io/f/xqalejka" method="POST">
+    <label><h4>Full Name</h4></label>
+    <input type="text" name="name" placeholder="Enter your full name" required />
+
+    <label><h4>Phone Number</h4></label>
+    <input type="tel" name="phone" placeholder="Enter your phone number" required />
+
+    <label><h4>Fill in your JAMB/UTME Registration Number</h4></label>
+    <input type="text" name="reg_number" placeholder="202500000000FF" required />
+
+    <label><h4>Please Input Your E-mail</h4></label>
+    <input type="email" for="email" name="email" required />
+
+    <label><h4>Select Your Faculty</h4></label>
+    <select name="faculty" id="faculty" onchange="showDepartments()" required style="width: 18rem; height: 2.5rem;">
+      <option value="">--Choose Your Faculty--</option>
+      <option value="Agriculture">Agriculture</option>
+      <option value="Allied">Allied Health</option>
+      <option value="Computing">Computing</option>
+    </select>
+
+    <br /><br />
+
+    <label for="departments">Select Department:</label>
+    <select id="departments" name="department" required>
+      <option value="">-- Choose a department --</option>
+    </select>
+
+    <br /><br />
+
+    <button type="submit" class="button">Submit</button>
+  </form>
+
+  <br /><br />
+
+  <footer id="footer">
+    <p>Contact us:</p>
+    <a href="mailto:nzefilitriumph@gmail.com">Send us an email: nzefilitriumph@gmail.com</a>
+    <p>Phone: +2348089074745</p>
+    <br>
+    
+    <a href="home.html"><button class="button">send us a message </button></a>
+  
+  <br><br>
+
+  <a href="index.html"   class="apply" style="width: 8rem; height: 0.3rem; color: navy;">home</a>
+  <br><br>
+
+</footer>
+
+  <script>
+    function showDepartments() {
+      const faculty = document.getElementById("faculty").value;
+      const departmentSelect = document.getElementById("departments");
+
+      departmentSelect.innerHTML = '<option value="">-- Choose a department --</option>';
+
+      const departmentsMap = {
+        Agriculture: ["Agricultural Science", "Animal Science", "Crop Science"],
+        Allied: ["Nursing", "Optometry"],
+        Computing: ["Computer Science", "Cyber Security", "Data Science", "Information Technology", "Software Engineering"]
+      };
+
+      const departments = departmentsMap[faculty] || [];
+
+      departments.forEach(function (dept) {
+        const option = document.createElement("option");
+        option.value = dept;
+        option.textContent = dept;
+        departmentSelect.appendChild(option);
+      });
+    }
+
+    // Save form data to localStorage before submit
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("application-form");
+
+      form.addEventListener("submit", function () {
+        const name = form.querySelector('input[name="name"]').value;
+        const phone = form.querySelector('input[name="phone"]').value;
+        const regNumber = form.querySelector('input[name="reg_number"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const faculty = form.querySelector('select[name="faculty"]').value;
+        const department = form.querySelector('select[name="department"]').value;
+
+        const user = {
+          name,
+          phone,
+          regNumber,
+          email,
+          faculty,
+          department,
+          password: regNumber,
+          status: "Pending"
+        };
+
+        // Save to localStorage just before submission
+        localStorage.setItem("user_" + email, JSON.stringify(user));
+        window.alert('Your Application Has Been sent');
+      });
+    });
+
+     
+        const navbar = document.getElementById("navbar");
+
+        const toggleBtn = document.getElementById("btn");
+
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navbar.classList.remove("active");
+            });
+        });
+
+    
+  </script>
+</body>
+</html>
